@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="fesco接口测试套件">
+    <test name="微信端接口">
+        <classes>
+            <class name="cases.mobileTest.AuthorityTest">
+                <methods>
+                    <include name="authorityTrue"></include>
+                </methods>
+                <methods>
+                    <include name="authorityFalse"></include>
+                </methods>
+                <methods>
+                    <include name="authorityID"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="保健康接口">
+        <classes>
+            <class name="cases.bjkTest.BjkReportTest">
+                <methods>
+                    <include name="bjkreport"></include>
+                </methods>
+            </class>
+            <class name="cases.bjkTest.BjkSelectIndividualInsuranceTest">
+                <methods>
+                    <include name="bjkindividualinsurance"></include>
+                </methods>
+            </class>
+            <class name="cases.bjkTest.BjkPushPicTest">
+                <methods>
+                    <include name="bjkpushpic1"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="config.ExtentTestNGIReporterListener" />
+    </listeners>
+</suite>

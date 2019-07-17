@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间mapper,如果有多个mapper文件，这个必须唯一 -->
+<mapper namespace="model">
+
+    <!--获取报案接口-->
+    <select id="BjkReturnContent" parameterType="Integer"  resultType="model.bjk.BjkReturnContent">
+
+        select * from BjkReportCase
+        where id = #{id};
+    </select>
+    <!--获取保健康图片信息-->
+    <select id="BjkPicInfo" parameterType="Integer"  resultType="model.bjk.BjkPicInfo">
+
+        select * from BjkPicInfo
+        where id = #{id};
+    </select>
+    <select id="Bjkindividualinsurance" parameterType="Integer"  resultType="model.bjk.BjkReturnContent">
+
+        select * from BjkReportCase
+        where id = #{id};
+    </select>
+
+</mapper>
